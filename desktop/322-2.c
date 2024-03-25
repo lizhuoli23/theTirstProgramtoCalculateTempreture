@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-float X[100],Y[100],Z[100],R[100];
+#define N 100
+float X[N],Y[N],Z[N],R[N];
 void random4()
 {
 	int i;
@@ -15,7 +16,7 @@ void random4()
 	srand(time(NULL));
  
 	// 均匀撒点
-	for (i=1; i < 100; i++)
+	for (i=0; i < N; i++)
 	{
 		
 		// 【0，1】区域撒点
@@ -37,7 +38,7 @@ int main()
 {
 	FILE *w=fopen("forcetext.txt","w");
 	random4();
-	for(int i=0;i<100;i++)
+	for(int i=0;i<N;i++)
 	{
 		fprintf(w,"%.2f %.2f %.2f %.2f\n",1+4*X[i],1+4*Y[i],4*Z[i],1+4*R[i]);
 	}
