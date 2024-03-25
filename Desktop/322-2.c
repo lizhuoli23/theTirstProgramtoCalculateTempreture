@@ -17,6 +17,7 @@ void random4()
 	// 均匀撒点
 	for (i=1; i < 100; i++)
 	{
+		
 		// 【0，1】区域撒点
 		x = (double) rand() / RAND_MAX;
 		y = (double) rand() / RAND_MAX;
@@ -34,10 +35,12 @@ void random4()
  
 int main()
 {
+	FILE *w=fopen("forcetext.txt","w");
 	random4();
 	for(int i=0;i<100;i++)
 	{
-		printf("%.2f %.2f %.2f %.2f\n",1+4*X[i],1+4*Y[i],4*Z[i],1+4*R[i]);
+		fprintf(w,"%.2f %.2f %.2f %.2f\n",1+4*X[i],1+4*Y[i],4*Z[i],1+4*R[i]);
 	}
+	fclose(w);
 	return 0;
 }
