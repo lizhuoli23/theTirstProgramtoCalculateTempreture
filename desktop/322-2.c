@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define N 100
-float X[N],Y[N],Z[N],R[N];
+#define N 200
+float X[N],Y[N],Z[N],R[200];
 void random4()
 {
 	int i;
