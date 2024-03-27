@@ -152,15 +152,16 @@ int main()
     {
         for (j = 0; j < num; j++)
         {
-            printf("%f ", T[i][j]);
+            printf("%5.3f ", T[i][j]);
         }
         printf("\n");
     }
+    printf("\n");
     for (i = 0; i < num; i++)
     {
         for (j = 0; j < num; j++)
         {
-            printf("%f ", I[i][j]);
+            printf("%5.3f ", I[i][j]);
         }
         printf("\n");
     }
